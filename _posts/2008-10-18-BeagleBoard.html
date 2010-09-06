@@ -1,0 +1,41 @@
+---
+layout: post
+title:  Adventures in Beagleboard Land - Compiler
+---
+
+
+<h1>{{ page.title }} </h1>
+
+<p id="meta" class="meta"> . 18 Oct 2008 - Johannesburg </p>
+
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_-1lN25IwqMs/SQMyW2QagzI/AAAAAAAAABU/qnztnYsRkw8/s1600-h/Linux_has_you_by_My_dynig_soul.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 320px; height: 207px;" src="http://3.bp.blogspot.com/_-1lN25IwqMs/SQMyW2QagzI/AAAAAAAAABU/qnztnYsRkw8/s320/Linux_has_you_by_My_dynig_soul.jpg" alt="" id="BLOGGER_PHOTO_ID_5261104157801743154" border="0" /></a>
+Welcome back to another installment of my adventures in Embedded Linux and everything Beagleboard. I'm going to walk through getting the compiler up and running and building the Linux Kernel.
+
+<span style="font-weight: bold;">About Compilers
+
+</span>In most Embedded Linux development, a developer will develop Software for his/her board on their host machine i.e Desktop computer, Laptop or 30x PS3 - Mega Server. They will write the code and then compile and build the code using a cross-platform toolchain or compiler. This will then allow the code now in an executable format to run on the target board (in our case the Beagleboard) .
+
+The compiler used with the Beagleboard is the one from <a href="http://www.codesourcery.com/gnu_toolchains/arm/portal/release313">Codesourcery</a>. I downloaded the Linux tar version, I initially tried the installer version but it didn't work for me - no idea why. Once the tar file is downloaded; unzip to a directory (I used "/opt").  To test that is is working do this:
+<pre>   /opt/arm-2007q3/bin/arm-none-linux-gnueabi-gcc
+</pre>You should get a <span style="font-style: italic;">no input file</span> response in your terminal. The path to your compiler can be saved in your environment setting  (/.profile) for ease of use. Our compiler is up and running. And now to compile something cool!
+<span style="font-weight: bold;"></span><span style="font-weight: bold;">
+Building the Kernel with Compiler</span>
+
+Its now time to get down to the alpha male of compiling... Compiling and building the Kernel. This is not as daunting as it initially feels like. <a href="http://elinux.org/BeagleBoard#Linux_kernel">Download</a> the Kernel for the OMAP:
+<pre>   git clone git://source.mvista.com/git/linux-omap-2.6.git
+</pre>Now these three basic/magic commands will get the compiler to build the Kernel according to the default beagle board setup:
+<pre>   make CROSS_COMPILE=/opt/arm-2007q3/bin/arm-none-linux-gnueabi- distclean
+  make CROSS_COMPILE=/opt/arm-2007q3/bin/arm-none-linux-gnueabi- omap3_beagle_defconfig
+  make CROSS_COMPILE=/opt/arm-2007q3/bin/arm-none-linux-gnueabi- uImage </pre>  The first line will return the source code to its original unconfigured state, removing all compiled code. The second line unsurprisingly sets the configurations for the Beagleboard. The final line is the money maker as it compiles the code creating a architecture-specific ELF file of the whole Linux Kernel, this file can be downloaded to the board and will be loaded by the bootloader. This file is our Linux Kernel  and root filesystem.
+
+The Kernel build system uses a config file, ".config", in the base directory of your kernel source code. This file, parsed through the Kernel build system, will build the Kernel according to the configuration file. How the Linux Build system works is quite complex - will have to be for another blog... Maybe...
+
+Ok now suppose you want to make some changes to the default configuration to customise the Kernel for your required needs, you can do this by typing:
+<pre>make CROSS_COMPILE=/opt/arm-2007q3/bin/arm-none-linux-gnueabi  menuconfig</pre>If menuconfig won't load, install ncurses-dev (<span style="font-style: italic;">sudo apt-get install ncurses-dev</span>).
+This loads up a program to make changes and generate your own config file. There are a truckload of options and it requires some research before changing them, however if you make a change and then the system doesn't run, the above 3 magic commands will get the system back to default and up and running, as long as it was running beforehand of course.
+*Warning: changing some of the CPU specific configurations could damage the CPU - so research any changes you want to make.
+
+Once your new image is built, all you have to do is put it on the SD card and load it up - the <a href="http://elinux.org/BeagleBoard">Beagle Wiki</a> will help you with that.
+
+Over the next couple weeks I will be looking at using OpenEmbedded and Angstrom, it looks really cool and very powerful. Hopefully report back when I have learned something interesting.
+

@@ -1,0 +1,38 @@
+---
+layout: post
+title: Beagleboard day 1
+---
+
+<h1>{{ page.title }} </h1>
+
+<p id="meta" class="meta"> . 15 Oct 2008 - Johannesburg </p>
+
+
+
+When I was holidaying in the UK last month I bought myself a <a href="http://beagleboard.org/">Beagleboard</a> from Digi-key. I have been dying to find a cost effective board to investigate<a href="http://en.wikipedia.org/wiki/Embedded_linux"> Embedded Linux</a> and this board is ideal for this.
+
+I have decided to try out two experiments at once. I always enjoy reading blogs specially programming blogs and have always wanted to start a blog but have had no reason too. This is where the Beagleboard comes in. Since I have a memory like a sieve I will be documenting my experience in using the Beagleboard to learn about Embedded Linux as well as hopefully help any other "n00bs" like myself.
+
+
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://farm4.static.flickr.com/3142/2420765852_063c30160b.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 320px;" src="http://farm4.static.flickr.com/3142/2420765852_063c30160b.jpg" alt="" border="0" /></a><span style="font-weight: bold;">Hardware And Demo Setup</span>
+
+This board is no puppy with a processor capable of running up to 600 Mhz, 256MB of Flash and 128MB of Sdram, this boards bark is definitely not as menacing as its bite...
+
+Now that I have the lame-can't-resist jokes out the way, this first post will cover getting it up and running with the demo build. When I ordered the board I was stupid enough not to read any further and did not realize it would be wise to get the other recommended kit. Like all embedded enginneers I should have known not to leave home without a valid serial port...
+
+The Serial port is a "<span style="font-style: italic;">AT/Everex</span>" or "<span style="font-style: italic;">IDC10</span>" pinout. You can purchase a serial cable that will connect the boards serial port to the computer's port from <a href="http://www.pccables.com/07120.htm">PC Cables</a>.  If you are like me and forgot there are ways around this. Using this <a href="http://elinux.org/upload/2/2c/Flyswatter-ti-uart.pdf">diagram</a> (pdf)  or the previous link, get a IDC10 connector or solder directly onto the pin-out on the board. If you use a male RS-232 connector then follow the diagram exactly, if you use a female connector don't like me spend an hour trying to figure out why your serial port is faulty, rather just switch the RX and TX pins around.
+
+For Revision B of the Beagleboard - which is the current revision - no USB Host is available, however <a href="http://en.wikipedia.org/wiki/USB_OTG">USB OTG </a>is available, allowing for the board to act as a device or a Host. For the Linux kernel to act as a host it needs to be informed. As twittering the Kernel is out, we need a <a href="http://trisoft.de/pics/ZHost.JPG">5 - pin mini USB cable</a>. If you are like me and still kicking yourself for not ordering one, a quick hack is available. If you solder pin 4 and 5 together on the board this will <span style="font-weight: bold;">permanently </span><span>put the Kernel</span><span style="font-weight: bold;"> </span>in USB host mode (please don't  mail me if this destroys your board, it worked fine for me). And then you can run the demo and use a keyboard and mouse with it as long as you have an externally powered USB hub. I have heard urban myths of doing this in software but so far no one has been able to tell me how.
+
+Digi-key are planning to offer the adaptors for the serial port, however they are having supplier issues at the moment. If you have not yet bought your board or are looking for a list of recommended peripherals these links should help you, check <a href="http://code.google.com/p/beagleboard/wiki/BeagleBoardShoppingList">this</a> and <a href="http://beagleboard.org/hardware">this</a> out. They also supply links on continuing further once you have a Beagleboard.
+
+<span style="font-weight: bold;">...And finally the demo running.</span><span>
+
+To get the Demo running is very straight forward. In fact, I'm not really going to add in anything extra to what the <a href="http://elinux.org/BeagleBoardBeginners">Beginner wiki page</a> said as it explained it perfectly. Run through the process of testing the board, then download all the demo files and format the SD card correctly. It should then just work.
+
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_-1lN25IwqMs/SPZVsRnRpDI/AAAAAAAAABM/mt-BxmpxdRs/s1600-h/2535894759_297dbfff80.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer;" src="http://3.bp.blogspot.com/_-1lN25IwqMs/SPZVsRnRpDI/AAAAAAAAABM/mt-BxmpxdRs/s320/2535894759_297dbfff80.jpg" alt="" id="BLOGGER_PHOTO_ID_5257483834132374578" border="0" /></a>
+
+[1] Photo's courtesy of <a href="http://dominion.thruhere.net/koen/cms/">Koen Kooi</a></span><a href="http://dominion.thruhere.net/koen/cms/"> flckr acoount</a><span>
+</span><span style="font-weight: bold;"><span style="font-weight: bold;">
+</span></span>
+
