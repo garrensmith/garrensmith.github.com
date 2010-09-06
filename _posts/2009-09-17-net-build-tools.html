@@ -1,0 +1,23 @@
+---
+layout: post
+title: Getting to know the .net build tools
+---
+
+<h1>{{ page.title }} </h1>
+
+<p id="meta" class="meta"> . 17 Sep 2009 - Johannesburg </p>
+
+<a href="http://th00.deviantart.net/fs35/300W/f/2008/293/3/c/Ant_by_Tamyl91.jpg"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 300px; height: 210px;" src="http://th00.deviantart.net/fs35/300W/f/2008/293/3/c/Ant_by_Tamyl91.jpg" border="0" alt="" /></a>
+
+I've recently been looking into using a build script to make building/testing my code easier. I've also wanted to implement a <a href="https://hudson.dev.java.net/">CI build server</a> and using a build script makes it a lot easier to implement.<div>
+</div><div><b>Small steps with Nant </b></div><div><b>
+</b></div><div>I decided to first look at the tried and tested <a href="http://nant.sourceforge.net/">Nant</a> build tool. Nant is a free build tool based on the Java <a href="http://ant.apache.org/">Ant</a>. The build script is a xml script that Nant then uses to build your project. I used the <a href="http://www.codeplex.com/AutoMapper">AutoMapper</a> build script as an example. This along with the Nant wiki helped me to write a basic script that could compile my code, check some sql scripts out of SVN and rename a file for me. The script below is what I wrote.</div><div><script src="http://gist.github.com/188652.js"></script>
+</div><div>Its not perfect and I'm not sure if I got all the naming of the tasks correct, however it did the job and I was quite happy with it as my first attempt.</div><div>
+</div><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://th08.deviantart.net/fs16/300W/i/2007/165/6/0/Rake_by_PenguBadger.jpg"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;width: 300px; height: 199px;" src="http://th08.deviantart.net/fs16/300W/i/2007/165/6/0/Rake_by_PenguBadger.jpg" border="0" alt="" /></a><div><b>Sharpening my Rake</b></div><div><b>
+</b></div><div>I've been reading plenty of good reviews on using Rake as a build tool for .net projects, so I decided to try this as well. Rake is a build program written in Ruby. With a bit of <a href="http://www.tobinharris.com/past/2009/8/17/automating-net-development-and-nhibernate-with-ironruby-rake/">help</a> I downloaded IronRuby and installed Rake with it. I then read a nice intro on <a href="http://railsenvy.com/2007/6/11/ruby-on-rails-rake-tutorial">rake</a>, I then used <a href="http://codebetter.com/blogs/david_laribee/archive/2008/08/25/omg-rake.aspx">this</a> example to copy my Nant script. This is what I ended up with:</div><div><script src="http://gist.github.com/188659.js"></script>
+</div><div>
+</div><div><b>The Analysis</b></div><div><b>
+</b></div><div>Nant has been used a lot in .net projects and is definitely worth learning. I will definitley spend some more time and get a better understanding of it. However Rake is just so cool. Its really nice to use something that is easy to read, and very powerful as you can use Ruby to write custom methods and objects. Using IronRuby gives you the power to access all you .net code which definitely has its benefits. Its also just plain fun using a dynamic language.</div><div>
+</div><div>I recommend all .net developers to give Rake a bash. </div>
+
+

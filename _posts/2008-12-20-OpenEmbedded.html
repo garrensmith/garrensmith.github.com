@@ -1,0 +1,24 @@
+---
+layout: post
+title: OpenEmbedded Beginnings
+---
+
+<h1>{{ page.title }} </h1>
+
+<p id="meta" class="meta"> . 20 Dec 2008 - Johannesburg </p>
+
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://i.iinfo.cz/urs/logo-112625974331241.png"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 215px; height: 142px;" src="http://i.iinfo.cz/urs/logo-112625974331241.png" alt="" border="0" /></a>
+I've been quite bad and been neglecting this blog. One of the reason is that Gears of War 2 has been distracting me, I've also been busying reading and tinkering on <a href="http://www.djangoproject.com/">Django</a>, and of course this time of year is quite crazy.
+
+I've finally gotten down to reading up and using OpenEmbedded with my Beagleboard. OpenEmbedded is fantastic as it does a lot of the work for you when it comes to compiling packages and building an image and rootfs for you embedded device.
+
+The best way to start using OpenEmbedded is to read the<a href="http://elinux.org/BeagleBoardAndOpenEmbeddedGit"> wiki page</a> at the beagleboard wiki.
+For extra information and to really explain what OpenEmbedded is I recommend reading the <a href="http://elinux.org/BeagleBoardAndOpenEmbeddedGit">user manual</a>. It is a little out dated and incomplete but still very useful.
+
+I built the basic <span style="font-style: italic;">console-image </span>first. I came across a slight problem when it came to building the u-boot package. This will be fixed pretty soon but if you try and build one of the images and get the same problem I posted a solution <a href="http://groups.google.com/group/beagleboard/browse_thread/thread/a27968d030dcf57a/f2ea240b049054a0?lnk=gst&amp;q=oe+u-boot#f2ea240b049054a0">here</a>, that needs to be applied to your <span style="font-style: italic;">$OE_HOME/openembedded/packages/u-boot/u-boot_git.bb </span>file
+
+Now I'm hoping to push on and setup a <a href="http://elinux.org/BeagleBoardOpenEmbeddedDevelopment">OpenEmbedded development enviroment</a> and start tinkering with the packages.
+
+Finally a <a href="http://elinux.org/BeagleBoard/contest">beagleboard contes</a>t is being setup, I would love to enter. Not sure if I know enough but will try.
+
+

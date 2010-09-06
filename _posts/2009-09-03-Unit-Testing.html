@@ -1,0 +1,32 @@
+---
+layout: post
+title: Unit Testing beginners feedback
+---
+
+<h1>{{ page.title }} </h1>
+
+<p id="meta" class="meta"> . 9 Sep 2009 - Johannesburg </p>
+
+<div style="text-align: center;"><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://blog-well.com/wp-content/uploads/2008/02/testing.jpg"><img style="margin: 0pt 10px 10px 0pt; cursor: pointer; width: 400px; height: 300px;" src="http://blog-well.com/wp-content/uploads/2008/02/testing.jpg" alt="" border="0" /></a>
+</div>The company I work for does not practice automated unit testing or any other form of automated testing.Testing has always been the practice of manually testing. This is incredibly tedious, frustrating and way to much elbow grease for a lazy developer. Ofter reading about my 100th blog that said "<span style="font-style: italic;">If you not testing you are an Idiot</span>", I decided to be brave and swim against the stream and start implementing unit testing.
+
+I bought <a href="http://www.pragprog.com/titles/utc2/pragmatic-unit-testing-in-c-with-nunit">Pragmatic Unit Testing in C# with NUnit</a>, which is a great book and is gives an excellent introduction into Unit Testing. After reading a fair bit about Test Driven Development I decided while I was still finding my feet to following the wise words of <a href="http://codebetter.com/blogs/karlseguin/">Karl Seguin </a>in his free<a href="http://codebetter.com/media/p/179694.aspx"> ebook</a> (definitely worth a read)
+<div style="text-align: center;">
+"I recommend that you familiarize yourself with unit testing in general before
+adopting TDD."
+
+<div style="text-align: center;"><span style="font-weight: bold;font-size:180%;">Tools of the Trade</span>
+</div><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://blog-well.com/wp-content/uploads/2008/02/onlinetools.jpg"><img style="margin: 0px auto 10px; display: block; text-align: center; cursor: pointer; width: 400px; height: 400px;" src="http://blog-well.com/wp-content/uploads/2008/02/onlinetools.jpg" alt="" border="0" /></a>
+
+<div style="text-align: left;">Every good craftsman needs useful tools to be effective, I "tooled up" using <a href="http://www.nunit.org/index.php">Nunit</a>, <a href="http://ayende.com/projects/rhino-mocks.aspx">RhinoMocks</a> and <a href="http://www.gallio.org/Screenshots.aspx">Gallio</a>. These tools really helped the process and made my life a lot easier. Gallio is a fantastic test runner and more, Nunit and RhinoMocks should need no introduction.
+
+Now to the actual meat of this post, my actual experience. All I can say is it was like the rain had come after a dusty hot day and cleared the sky. Everything made sense and I was forced to write better code that was testable, maintable and easier to understand. Ok not straight away...
+
+Initially I found myself producing code at a slower rate , fighting off the critics at the office I perserved. I then started realising that the amount of time spent debugging was minimal. I was spending more time coding and less time entering data in textboxed on our forms, trying to replicate the bug and then hoping the debugger would break at the right spot so I can fix the error. Then repeating the manual test until it worked.
+
+About 2 months of unit testing I am finding that I am producing code at a better rate and feel more confident in the quality of it. I would like to investigate TDD more now as well as writing more effective tests .
+
+Unit testing definitely makes you more aware of the <a href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">SOLID principles</a> and I found that my code was a lot more decoupled - so that I can mock each object. I was also more aware of the law of Demeter and consciencly making sure that all my objects obeyed the Single Responsiblilty Principle.  I definitley have lots to learn still and am still getting to grips with mocking. I can really say that the biggest acheivement in my short programming career has been to unit test!
+
+</div></div>
+
