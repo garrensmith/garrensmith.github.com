@@ -1,0 +1,17 @@
+---
+layout: post
+title: .Net Coding metric released
+---
+
+
+<h1>{{ page.title }} </h1>
+
+<p id="meta" class="meta"> . 26 Jan 2010 - Johannesburg </p>
+
+<p><img style="float: left;" src="/images/metric.jpeg" alt="" width="403" height="300" /></p>
+<p>I've finally started my first open source project. In the Agile team I am currently working with, I found I needed a simple metric tool to analyze our code and give some simple code metrics to help the team. <br /><br />The team was using code coverage as our only metric. Code coverage is a very crude tool to determine the quality of our tests. I wanted some more metrics to help us analyze our code to determine the quality of the code being written. We have as a team set certain standards which must be met for each class being written. Two of these is the lines of code per method and the complexity of the method. I initially looked at <a href="http://www.ndepend.com/" target="_blank">Ndepend</a> , which is a fantastic tool, to help us measure these, but Ndepend is more complex then what we required.&nbsp; <br /><br />From these humble beginning DrivenMetrics was born. DrivenMetrics is a very simple metrics tool that can analyze an assembly to determine the number of lines in a method and the cyclomatic complexity (number of different branches) of a method. <br /><br />When I set out to write this library I had some simple goals. I wanted to do TDD, I wanted to use <a href="http://www.mono-project.com/Cecil" target="_blank">Mono.Cecil</a> to learn a bit about it along with ILasm and I wanted to write a console app with some decent commands like any *nix command line tool. I also wanted a good excuse to use github and get a feel for git and then hopefully eventually be cool like all the other cool kids using github :-)<br /><br />The library works by using Mono.Cecil to disassemble the a .net assembly and then using <a href="http://evain.net/blog/articles/2009/04/27/pdb2mdb-and-mono-cecil-pdb" target="_blank">Mono.Cecil.Pdb</a> to load all the debugging symbols. The two metrics are then run to analyze the code, the results are then written to an html report. The tool is still very much in its infancy and any help from the greater community would be appreciated. To build the code use <a href="http://rake.rubyforge.org/" target="_blank">rake</a>, I have not used <a href="http://github.com/derickbailey/Albacore" target="_blank">albacore</a> or rake.net as my build library but rather the simple BuildUtils.rb from <a href="http://codebetter.com/blogs/jeremy.miller/" target="_blank">Jeremy Miller's</a> <a href="http://storyteller.tigris.org/" target="_blank">StoryTeller</a>. <br /></p>
+<p>&nbsp;</p>
+<p>I would appreciate any feedback anyone is willing to give. I have a Todo.txt with things I would later like to add to the project. The source code is available on github at: <a href="http://github.com/garrensmith/DrivenMetrics" target="_blank">www.github.com/garrensmith/Drivenmetric</a></p>
+<p>&nbsp;</p>
+
+
