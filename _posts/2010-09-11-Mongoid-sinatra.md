@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setup Mongoid with Sinatra
+title: Mongoid and Sinatra duet
 ---
 
 {{ page.title }}
