@@ -81,7 +81,7 @@ ul.posts {
 .site {
   font-size: 110%;
   text-align: justify;
-  width: 40em;
+  width: 960px;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
 }
@@ -153,6 +153,9 @@ ul.posts {
 }
 
   /* standard */
+#post h1 {
+  font-size: 36px;
+}
 
   #post pre {
     border: 1px solid #ddd;
