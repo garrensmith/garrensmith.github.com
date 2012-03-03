@@ -6,7 +6,7 @@ title: Announcing Red Comet Labs
 {{ page.title }}
 ================
 
-<p id="meta" class="meta"> . 1 Aug 2011 - Johannesburg </p>
+<p id="meta" class="meta"> 1 Aug 2011 - Johannesburg </p>
 
 Today is my first day at [Red Comet Labs](http://www.redcometlabs.com). So far so good. The dress code is quite relaxed, work seems interesting and the boss is quite a funny guy. Though I could be biased as I am the boss. 
 

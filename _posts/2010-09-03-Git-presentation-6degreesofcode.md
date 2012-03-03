@@ -6,7 +6,7 @@ title: Git introduction presentation
 {{ page.title }}
 ================
 
-<p id="meta" class="meta"> . 3 Sep 2010 - Johannesburg </p>
+<p id="meta" class="meta"> 3 Sep 2010 - Johannesburg </p>
 
 I did a talk last night at the Six [degrees user group](http://www.6degreesofcode.org), it was great fun. I gave an introduction to git and how to use it in various team situations. It was nice to have contribution from the audience and their experiences with Git or other source controls. 
 

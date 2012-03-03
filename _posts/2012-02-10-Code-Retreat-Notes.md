@@ -6,7 +6,7 @@ title: Short Note from Code Retreat
 {{ page.title }}
 ================
 
-<p id="meta" class="meta"> . 10 Feb 2012 - Johannesburg </p>
+<p id="meta" class="meta"> 10 Feb 2012 - Johannesburg </p>
 
 Last Saturday I did a [CodeRetreat](http://www.coderetreat.org) with [Corey Haines](http://coreyhaines.com/) at [RubyFuza](http://www.rubyfuza.org). It was a great and humbling experience. It showed how important
 it is to continually practise your coding skills. Corey had four important points for better design that I haphazardly wrote down on a scrap of paper. I feel they deserve more respect than that. 

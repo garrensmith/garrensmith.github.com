@@ -6,7 +6,7 @@ title: Mongoid and Sinatra duet
 {{ page.title }}
 ================
 
-<p id="meta" class="meta"> . 3 Sep 2010 - Johannesburg </p>
+<p id="meta" class="meta"> 3 Sep 2010 - Johannesburg </p>
 
 I am slowly catching up with all the latest hotness in the opensource world. I currently am interested in nosql, specifically [Mongodb](http://www.mongodb.org/).
 I decided to do a quick demo with it using [Sinatra](http://sinatrarb.com), my favorite web DSL, to see whats involved with installing it and using a ORD with it. I decided to go with [Mongoid](http://http://mongoid.org/), [MongoMapper](http://mongomapper.com/) is also a very good option if you prefer a more ActiveRecord style.

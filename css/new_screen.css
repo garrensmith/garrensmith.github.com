@@ -83,6 +83,7 @@ h2  {
     background-color: #eef;
     font-size: 85%;
     padding: 0 .2em;
+    font-family: Monaco, "Courier New", monospace;
   }
 
     #post pre code {
@@ -102,7 +103,7 @@ h2  {
   }
 
   #post h1 {
-    font-family: 'Simonetta', cursive;
+    font-family: 'Simonetta',  Helvetica, Arial, sans-serif;
     font-size: 3.5em;
   }
 
@@ -139,4 +140,48 @@ h2  {
   margin-right: auto;
 
 }
+
+#title-box {
+  position: relative;
+  left:-10px;
+  margin:0px;
+}
+
+#header-name {
+font-family: 'Simonetta',  Helvetica, Arial, sans-serif;
+text-decoration: none;
+font-size:1.5em;
+color:white;
+background-color: #82020E;
+padding:10px;
+left:0px
+}
+
+.fancy-header {
+font-family: 'Simonetta',  Helvetica, Arial, sans-serif;
+font-size:36px;
+
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+  ul.posts li {
+    line-height: 1.75em;
+  }
+
+  ul.posts span {
+    color: #aaa;
+    /*font-family: Monaco, "Courier New", monospace;*/
+    font-size: 80%;
+  }
+
 

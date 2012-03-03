@@ -6,7 +6,7 @@ title: Couchdb Internals - The Prequel
 {{ page.title }}
 ================
 
-<p id="meta" class="meta"> . 27 Feb 2012 - Johannesburg </p>
+<p id="meta" class="meta"> 27 Feb 2012 - Johannesburg </p>
 
 I'm currently taking the [Introduction to CouchDB Development](http://moodle.wohmart.com/course/view.php?id=2). The first part, obviously, was focused on learning Erlang. 
 This alone has made the course worth it. I still have a long way to go in understanding Erlang but I now at least have a basic knowledge of what it's about. 
