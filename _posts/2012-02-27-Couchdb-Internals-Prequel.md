@@ -67,7 +67,7 @@ then change the handler config to use your one instead.
 
 The other important config file is ```local.ini```, this is used for overriding any settings found in ```default.ini```. From what I understand of it, you can add your own handlers there for specific requests, set a different port address and a multitude of other options.
 
-#Going forward
+## Going forward
 I found that before I dive into code I always need to understand how the project works, hence this post. Maybe I need to see the forest before looking at individual trees. Exploring the code and writing this
  post helped me quite a bit. Leave a comment if I have missed anything or have documented something wrong.
 
