@@ -19,7 +19,7 @@ should automatically start up again.
 ## Bluepill
 
 I initially took a look at [Monit](http://mmonit.com/monit/), [God](http://godrb.com/) and [Bluepill](https://github.com/arya/Bluepill) for process monitoring of Classroom 7. I've used Monit before and although really powerful I found it quite difficult to setup, God seemed good but I've heard of memory leak issues
-and didn't feel like having something else monitoring my monitoring process (process inception anyone?). Bluepill was the eventual winner. Bluepill is really easy to install just follow the [README](https://github.com/arya/Bluepill/blob/master/README.md).
+and didn't feel like having something else monitoring my monitoring process (process inception anyone?) (**Update** David mentions in the comments that God's memory issues have been sorted out). Bluepill was the eventual winner. Bluepill is really easy to install just follow the [README](https://github.com/arya/Bluepill/blob/master/README.md).
 Below is my Bluepill configuration file. I created separate ones for Production and Staging. 
 
 <script src="https://gist.github.com/3780648.js?file=gistfile1.rb"></script>
