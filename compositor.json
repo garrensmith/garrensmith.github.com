@@ -1,0 +1,87 @@
+{
+  "name": "garrensmith/garrensmith.github.com",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Swiss",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/SwissHeader",
+      "article": "article/SwissArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+    "heading": {
+      "fontWeight": 700,
+      "letterSpacing": "-0.01em"
+    },
+    "layout": {
+      "fluid": true
+    },
+    "colors": {
+      "text": "#000",
+      "background": "#fff",
+      "primary": "#05a",
+      "secondary": "#444",
+      "highlight": "#f30",
+      "border": "#ccc",
+      "muted": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "http://garrensmith.github.com",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/garrensmith/garrensmith.github.com",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "garrensmith.github.com",
+      "subhead": "My github pages",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "garrensmith.github.com: My github pages",
+          "url": "http://garrensmith.github.com"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "garrensmith",
+          "repo": "garrensmith.github.com"
+        }
+      ]
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<p>h1. This is the data for my blog</p>\n<p>It is automatically transformed by &quot;Jekyll&quot;:<a href=\"http://github.com/mojombo/jekyll\">http://github.com/mojombo/jekyll</a> into a static site whenever I push this repository to GitHub.</p>\n<p>I was tired of having my blog posts end up in a database off on some remote server. That is backwards. I&apos;ve lost valuable posts that way. I want to author my posts locally in Textile or Markdown. My blog should be easily stylable and customizable any way I please. It should take care of creating a feed for me. And most of all, my site should be stored on GitHub so that I never lose data again.</p>\n<p>h1. License</p>\n<p>The following directories and their contents are Copyright Garren Smith. You may not reuse anything therein without my permission:</p>\n<ul>\n<li>_posts/</li>\n<li>images/</li>\n</ul>\n<p>All other directories and files are MIT Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to <a href=\"http://github.com/mojombo/jekyll\">http://github.com/mojombo/jekyll</a> would be appreciated, but is not required.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/garrensmith/garrensmith.github.com",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/garrensmith",
+          "text": "garrensmith"
+        }
+      ]
+    }
+  ]
+}
